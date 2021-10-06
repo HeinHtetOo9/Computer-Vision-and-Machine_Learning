@@ -5,15 +5,15 @@ window_name = "BGR COLOR PLATTE"
 
 cv.namedWindow(window_name)
 def blue(blue):
-    blue = cv.getTrackbarPos("B",window_name)
+    blue = cv.getTrackbarPos("BLUE",window_name)
     return blue
-
+    
 def green(green):
-    green = cv.getTrackbarPos("G",window_name)
+    green = cv.getTrackbarPos("GREEN",window_name)
     return green
 
 def red(red):
-    red = cv.getTrackbarPos("R",window_name)
+    red = cv.getTrackbarPos("RED",window_name)
     return red
 
 def main():
@@ -22,9 +22,9 @@ def main():
     # window_name = "BGR COLOR PLATTE"
     # cv.namedWindow(window_name)
 
-    cv.createTrackbar("B",window_name,0,255,blue)
-    cv.createTrackbar("G",window_name,0,255,green)
-    cv.createTrackbar("R",window_name,0,255,red)
+    cv.createTrackbar("BLUE",window_name,0,255,blue)
+    cv.createTrackbar("GREEN",window_name,0,255,green)
+    cv.createTrackbar("RED",window_name,0,255,red)
 
     while True:
         cv.imshow(window_name,img)
